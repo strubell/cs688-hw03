@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{chngpage}
+\usepackage{graphicx}
+\usepackage[protrusion=true,expansion,kerning]{microtype}
+\usepackage{url}
+
+% adjust margins:
+\topmargin=-0.25in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=8.5in
+\headsep=0.25in
+
+% document-specific information
+\newcommand{\docTitle}{Homework \#3}
+\newcommand{\docSubTitle}{}
+\newcommand{\docDate}{}
+\newcommand{\docClass}{CS688}
+\newcommand{\docInstructor}{Marlin}
+\newcommand{\authorName}{Emma Strubell}
+
+% header and footer
+\pagestyle{fancy}
+\lhead{\authorName}
+\chead{\docTitle}
+\rhead{\docClass\ --\ \docInstructor}   
+\lfoot{}
+\cfoot{}
+\rfoot{\emph{Page\ \thepage\ of\ \pageref{LastPage}}}                          
+\renewcommand\headrulewidth{0.4pt}
+\renewcommand\footrulewidth{0.4pt}
+
+\allowdisplaybreaks
+
+\begin{document}
+\begin{enumerate}
+
+\item % Question 1
+\begin{enumerate}
+\item
+I found that parameters $W^L=1.0$, $W^P=20.0$ gave good results in terms of MAE, achieving a low MAE of 0.0192 after 100 iterations. Posterior mean image:
+\begin{center}
+\includegraphics[scale=0.6]{q1-good}
+\end{center}
+
+Parameters $W^L=0.001$, $W^P=0.9$ vastly oversmoothed the image getting a high MAE of 0.4453 after 100 iterations. Posterior mean image:
+\begin{center}
+\includegraphics[scale=0.6]{q1-oversmoothed}
+\end{center}
+
+Parameters $W^L=0.5$, $W^P=0.5$ undersmoothed the image, making little change after 100 iterations and getting an MAE of 0.1054. Posterior mean image:
+\begin{center}
+\includegraphics[scale=0.6]{q1-undersmoothed}
+\end{center}
+
+\item
+
+
+\end{enumerate}
+
+\item % Question 2
+\begin{enumerate}
+\item
+\item
+\item
+\end{enumerate}
+
+\end{enumerate}
+\end{document}
