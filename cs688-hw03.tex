@@ -44,31 +44,41 @@
 \item % Question 1
 \begin{enumerate}
 \item
-I found that parameters $W^L=1.0$, $W^P=20.0$ gave good results in terms of MAE, achieving a low MAE of 0.0192 after 100 iterations. Posterior mean image:
+I found that parameters $W^L=1.0$, $W^P=20.0$ gave good results in terms of MAE, achieving a MAE of 0.035703 after 100 iterations. Posterior mean image:
 \begin{center}
 \includegraphics[scale=0.6]{q1-good}
 \end{center}
 
-Parameters $W^L=0.001$, $W^P=0.9$ vastly oversmoothed the image getting a high MAE of 0.4453 after 100 iterations. Posterior mean image:
+Parameters $W^L=0.001$, $W^P=0.9$ oversmoothed the image getting a high MAE of 0.144936 after 100 iterations. Posterior mean image:
 \begin{center}
 \includegraphics[scale=0.6]{q1-oversmoothed}
 \end{center}
 
-Parameters $W^L=0.5$, $W^P=0.5$ undersmoothed the image, making little change after 100 iterations and getting an MAE of 0.1054. Posterior mean image:
+Parameters $W^L=0.5$, $W^P=0.5$ undersmoothed the image, making little change after 100 iterations and getting an MAE of 0.106705. Posterior mean image:
 \begin{center}
 \includegraphics[scale=0.6]{q1-undersmoothed}
 \end{center}
 
 \item
-
-
+It took about 48 iterations for the posterior mean MAE to converge to approximately 0.357. I decided that the algorithm had converged when the absolute difference in MAE between iterations went below $1\times 10^{-6}$:
+\begin{center}
+\includegraphics[scale=0.56]{q1-convergence}
+\end{center}
 \end{enumerate}
 
 \item % Question 2
 \begin{enumerate}
 \item
+I found that parameters $W^L=100.0$, $W^P=100.0$ gave good results in terms of MAE, achieving a MAE of 0.0317963 at convergence. Posterior mean image:
+\begin{center}
+\includegraphics[scale=0.6]{q2-good}
+\end{center}
+
 \item
+
 \item
+
+
 \end{enumerate}
 
 \end{enumerate}
