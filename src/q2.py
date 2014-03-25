@@ -24,7 +24,11 @@ do_plot = True
 w_l = 100.0
 w_p = 200.0
 
-y, maes = denoise.denoise_greyscale(w_l, w_p, noise_data, orig_data, run_until_convergence=False)
+#w_l = 0.1
+#w_p = 0.9
+
+#y, maes = denoise.denoise_greyscale(w_l, w_p, noise_data, orig_data, run_until_convergence=True)
+y, maes = denoise.denoise_greyscale2(w_l, w_p, noise_data, orig_data, run_until_convergence=False)
 print "Final MAE:", maes[-1]
 
 if(do_plot):
