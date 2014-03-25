@@ -31,6 +31,9 @@ do_plot = True
 #w_p = 0.5
 
 # good
+#w_l = 1.0
+#w_p = 20.0
+
 w_l = 1.0
 w_p = 20.0
 
@@ -41,17 +44,17 @@ if(do_plot):
     fig1 = plt.figure()
     ax1 = fig1.add_subplot(111)
     ax1.set_title("Original data (binary)")
-    ax1.imshow(orig_data, interpolation='nearest', cmap='Greys')
+    ax1.imshow(orig_data, interpolation='nearest', cmap='gray')
       
     fig2 = plt.figure()
     ax2 = fig2.add_subplot(111)
     ax2.set_title("Noisy data (binary)")
-    ax2.imshow(noise_data, interpolation='nearest', cmap='Greys')
+    ax2.imshow(noise_data, interpolation='nearest', cmap='gray')
     
     fig3 = plt.figure()
     ax3 = fig3.add_subplot(111)
     ax3.set_title("Denoised data (binary) (MAE=%g)" % (maes[-1]))
-    ax3.imshow(y, interpolation='nearest', cmap='Greys')
+    ax3.imshow(y, interpolation='nearest', cmap='gray')
     
     fig4 = plt.figure()
     ax4 = fig4.add_subplot(111)
