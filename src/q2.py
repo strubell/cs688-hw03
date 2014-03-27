@@ -21,13 +21,13 @@ noise_data = np.loadtxt(noise_fname)
 do_plot = True
 
 # initialize w_p, w_l to (single) positive value each
-w_l = 100.0
-w_p = 200.0
+#w_l = 200.0
+#w_p = 100.0
 
-#w_l = 0.1
-#w_p = 0.9
+w_l = 99e3
+w_p = 10.0
 
-#y, maes = denoise.denoise_greyscale(w_l, w_p, noise_data, orig_data, run_until_convergence=True)
+#y, maes = denoise.denoise_greyscale(w_l, w_p, noise_data, orig_data, run_until_convergence=False)
 y, maes = denoise.denoise_greyscale2(w_l, w_p, noise_data, orig_data, run_until_convergence=False)
 print "Final MAE:", maes[-1]
 

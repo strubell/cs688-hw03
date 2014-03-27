@@ -31,13 +31,11 @@ do_plot = True
 #w_p = 0.5
 
 # good
-#w_l = 1.0
-#w_p = 20.0
+w_l = 5.0
+w_p = 4.0
 
-w_l = 1.0
-w_p = 20.0
-
-y, maes = denoise.denoise_binary(w_l, w_p, noise_data, orig_data, run_until_convergence=False)
+#y, maes = denoise.denoise_binary(w_l, w_p, noise_data, orig_data, run_until_convergence=False)
+y, maes = denoise.denoise_binary_checkerboard(w_l, w_p, noise_data, orig_data, run_until_convergence=False)
 print "Final MAE:", maes[-1]
 
 if(do_plot):
