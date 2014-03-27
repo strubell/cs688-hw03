@@ -23,19 +23,19 @@ do_plot = True
 # initialize w_p, w_l to (single) positive value each
 
 # over-smoothed
-#w_l = 0.0001
-#w_p = 0.9
+#w_l = 0.1
+#w_p = 100.0
 
 # under-smoothed
-#w_l = 0.5
-#w_p = 0.5
+#w_l = 5.0
+#w_p = 1.0
 
 # good
 w_l = 5.0
 w_p = 4.0
 
 #y, maes = denoise.denoise_binary(w_l, w_p, noise_data, orig_data, run_until_convergence=False)
-y, maes = denoise.denoise_binary_checkerboard(w_l, w_p, noise_data, orig_data, run_until_convergence=False)
+y, maes = denoise.denoise_binary_checkerboard(w_l, w_p, noise_data, orig_data, run_until_convergence=True)
 print "Final MAE:", maes[-1]
 
 if(do_plot):

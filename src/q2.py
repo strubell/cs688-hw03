@@ -21,14 +21,17 @@ noise_data = np.loadtxt(noise_fname)
 do_plot = True
 
 # initialize w_p, w_l to (single) positive value each
+
+# for first version
 #w_l = 200.0
 #w_p = 100.0
 
-w_l = 99e3
+# for second version
+w_l = 200.0
 w_p = 10.0
 
-#y, maes = denoise.denoise_greyscale(w_l, w_p, noise_data, orig_data, run_until_convergence=False)
-y, maes = denoise.denoise_greyscale2(w_l, w_p, noise_data, orig_data, run_until_convergence=False)
+#y, maes = denoise.denoise_greyscale_checkerboard(w_l, w_p, noise_data, orig_data, run_until_convergence=False)
+y, maes = denoise.denoise_greyscale_checkerboard2(w_l, w_p, noise_data, orig_data, run_until_convergence=False)
 print "Final MAE:", maes[-1]
 
 if(do_plot):
